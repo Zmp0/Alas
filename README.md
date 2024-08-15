@@ -4,9 +4,18 @@ move the alas file into /usr/local/bin,but for make it ,it need root permission,
 
 ```
 
-git clone https://github.com/Zmp0/Alas.git && cd Alas && sudo cp alas /usr/local/bin && sudo chown $USERNAME /usr/local/bin/alas && chmod +x /usr/local/bin/alas
+$ git clone https://github.com/Zmp0/Alas.git && cd Alas && sudo cp alas /usr/local/bin && sudo chown $USERNAME /usr/local/bin/alas && chmod +x /usr/local/bin/alas
 
 ```
+if you want to modify it:
+
+```
+
+$ nano /usr/local/bin/alas
+
+```
+
+#### Description
 
 - a simple command to add aliases to the .bashrc file and source it afterwards
 

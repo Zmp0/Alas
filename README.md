@@ -1,4 +1,4 @@
-#### Installation
+### Installation
 
 move the alas file into /usr/local/bin,but for make it ,it need root permission, so automate it with this code
 

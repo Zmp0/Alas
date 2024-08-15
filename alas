@@ -9,9 +9,6 @@ if [ "$1" == "-r" ]; then
     ALIAS_NAME=$2
     # Remove the alias from the file
     sed -i "/alias $ALIAS_NAME=/d" "$CONFIG_FILE"
-    # Source the file
-    source "$CONFIG_FILE"
-    echo "Alias removed and configuration sourced successfully."
 else
     # Add alias mode
     if [ $# -ne 2 ]; then
@@ -22,7 +19,4 @@ else
     COMMAND=$2
     # Add the alias to file
     echo "alias $ALIAS_NAME='$COMMAND'" >> "$CONFIG_FILE"
-    # Source the file
-    source "$CONFIG_FILE"
-    echo "Alias added and configuration sourced successfully."
 fi

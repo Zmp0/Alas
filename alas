@@ -1,0 +1,36 @@
+#!/bin/bash
+
+CONFIG_FILE="$HOME/.bashrc"
+
+if [ "$1" == "-r" ]; then
+    # Remove alias mode
+    if [ $# -ne 2 ]; then
+        echo "Usage: alas -r <alias_name>"
+        exit 1
+    fi
+    ALIAS_NAME=$2
+
+    # Remove the alias from the configuration file
+    sed -i "/alias $ALIAS_NAME=/d" "$CONFIG_FILE"
+
+    # Source the configuration file
+    source "$CONFIG_FILE"
+
+    echo "Alias removed and configuration sourced successfully."
+else
+    # Add alias mode
+    if [ $# -ne 2 ]; then
+        echo "Usage: alas <alias_name> <command>"
+        exit 1
+    fi
+    ALIAS_NAME=$1
+    COMMAND=$2
+
+    # Add the alias to the configuration file
+    echo "alias $ALIAS_NAME='$COMMAND'" >> "$CONFIG_FILE"
+
+    # Source the configuration file
+    source "$CONFIG_FILE"
+
+    echo "Alias added and configuration sourced successfully."
+fi

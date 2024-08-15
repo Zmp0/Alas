@@ -1,14 +1,14 @@
-a simple command to add aliases to the .bashrc file and source it afterwards
+- a simple command to add aliases to the .bashrc file and source it afterwards
 
-this works only for bash shell, if you have zsh or fish modify a little the code 
+- this works only for bash shell, if you have zsh or fish modify a little the code 
 
-it have 2 modes,one for add an alias and one for remove it
+- it have 2 modes,one for add an alias and one for remove it
 
 the first one is 
 
 ```
 
-alas alias_name "alias_command"
+$ alas alias_name "alias_command"
 
 ```
 
@@ -16,7 +16,7 @@ for example:
 
 ```
 
-alas p "clear"
+$ alas p "clear"
 
 ```
 
@@ -24,7 +24,7 @@ and for more phrases:
 
 ```
 
-alas upd "sudo apt update && sudo apt upgrade -y"
+$ alas upd "sudo apt update && sudo apt upgrade -y"
 
 ```
 
@@ -32,7 +32,7 @@ and for the remove mode:
 
 ```
 
-alas -r alias_name
+$ alas -r alias_name
 
 ```
 
@@ -40,8 +40,8 @@ for example:
 
 ```
 
-alas -r upd 
-alas -r p
+$ alas -r upd 
+$ alas -r p
 
 ```
 
